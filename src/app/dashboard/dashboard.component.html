@@ -1,0 +1,396 @@
+<nav>
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item active">Dashboard</li>
+  </ul>
+</nav>
+
+
+<h5>Dashboard</h5>
+<div class="row">
+  <!-- Box 1 -->
+  <div class="col-lg-3 pb-3" style="background-color: #e9e6e6;">
+    <div class="row">
+      <div class="col-11 text-white text-center mx-2 rounded pt-2 pv-2 font-weight-bold" style="background-color: #a39e9e; font-family: 'Nunito', 'sans-serif'" >
+        {{  Designation }}
+      </div>
+      <div class="col-12 text-center mt-2">
+        <img src="../../assets/img/user.png" width="120px">
+      </div>
+      <div class="col-12 text-center pt-2 pb-2 font-weight-bold" style="font-family: Tahoma">
+        {{Username}}
+      </div>
+      <div class="col-12 text-center pt-2 pb-2" style="font-family: PT Sans">TEAM SUMMARY</div>
+      <div class="col-12 mb-3">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            NO. OF TEAM MEMBERS
+            <span class="badge badge-secondary badge-pill" style="font-size: 13px;">
+              {{NumOfTeamMembers}}
+            </span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            TOTAL COST OF ALL PROJECTS
+            <span class="badge badge-secondary badge-pill" style="font-size: 13px;">
+              {{TotalCostOfAllProjects | currency:'USD'}} K
+            </span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            PENDING TASKS
+            <span class="badge badge-secondary badge-pill" style="font-size: 13px;">
+              {{PendingTasks}}
+            </span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+           UPCOMING PROJECTS
+            <span class="badge badge-secondary badge-pill" style="font-size: 13px;">
+              {{UpcomingProjects}}
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 text-center pt-2 pb-2" style="font-family: Mulish;">CLIENTS</div>
+      <div class="col-12">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Spacey Company Limited</li>
+          <li class="list-group-item">ABC Infotech Ltd</li>
+          <li class="list-group-item">NAF Software Solutions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!-- Box 2 -->
+  <div class="col-lg-6">
+    <div class="row">
+      <div class="col-12 pt-0 pb-2" style="background-color: #e9e6e6">
+        <div class="row mt-2">
+          <div class="col-6 text-left">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">Project A</button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Project A</a>
+                <a href="#" class="dropdown-item">Project B</a>
+                <a href="#" class="dropdown-item">Project C</a>
+                <a href="#" class="dropdown-item">Project D</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 text-right">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">2020</button>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">2020</a>
+                <a href="#" class="dropdown-item">2019</a>
+                <a href="#" class="dropdown-item">2018</a>
+                <a href="#" class="dropdown-item">2017</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-11 mx-auto mt-1 text-white text-center pt-2 pb-2 rounded font-weight-bold" style="background-color: #718d97;">PROJECT BRIEFING</div>
+      <div class="col-12">
+        <table class="table table-borderless">
+          <tr>
+            <td>Project Cost</td>
+            <td> {{ProjectCost | currency:'USD'}} </td>
+          </tr>
+          <tr>
+            <td>Current Expenditure</td>
+            <td> {{CurrentExpenditure | currency:'USD'}} </td>
+          </tr>
+          <tr>
+            <td>Available Funds </td>
+            <td> {{ AvailableFunds | currency:'USD'}} </td>
+          </tr>
+        </table>
+      </div>
+
+
+      <div class="col-11 mx-auto mt-1 text-white text-center pt-2 pb-2 mx-2 rounded font-weight-bold" style="font-family: PT Sans; background-color:#718d97">TEAM MEMBERS SUMMARY</div>
+        <div class="col-12">
+          <table class=" mt-2 table table-bordered table-striped">
+
+            <thead>
+              <tr>
+                <th>Region</th>
+                <th>Team Members Count</th>
+                <th>Temporarily Unavailable Members</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><b>East</b></td>
+                <td><b>20</b></td>
+                <td><b>4</b></td>
+              </tr>
+              <tr>
+                <td><b>South</b></td>
+                <td><b>15</b></td>
+                <td><b>8</b></td>
+              </tr>
+              <tr>
+                <td><b>West</b></td>
+                <td><b>17</b></td>
+                <td><b>1</b></td>
+              </tr>
+              <tr>
+                <td><b>North</b></td>
+                <td><b>15</b></td>
+                <td><b>6</b></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+  </div>
+
+  <!-- Box 3 -->
+    <div class="col-lg-3 pb-3" style="background-color: #e9e6e6;">
+      <div class="row">
+        <div class="col-11 mt-1 text-white text-center mx-2 rounded pt-2 pb-2 font-weight-bold" style="background-color: #718d97; font-family: 'Nunito', 'sans-serif'" >TEAM MEMBERS</div>
+        <div class="col-lg-12 pt-2">
+          <div class="accordion" id="accordionExample">
+            <!-- Accordion 1 -->
+            <div class="card">
+              <div class="card-header bg-secondary" id="card1">
+                <h2 class="mb-0">
+                  <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#cardBody1">East</button>
+                </h2>
+              </div>
+              <div id="cardBody1" class="collapse show" data-parent="#accordionExample">
+                <div class="card-body">
+                  <table class="table">
+
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Ford</td>
+                        <td><i class="mr-2 fa fa-phone"></i>Available</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Miller</td>
+                        <td><i class="mr-2 fa fa-phone"></i>Available</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Jones</td>
+                        <td><i class="mr-2 fa fa-user-times"></i>Busy</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>James</td>
+                        <td><i class="mr-2 fa fa-user-times"></i>Busy</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accordion 2 -->
+            <div class="card">
+              <div class="card-header bg-secondary" id="card2">
+                <h2 class="mb-0">
+                  <button class="btn text-white" type="button" data-toggle="collapse" data-target="#cardBody2">South</button>
+                </h2>
+              </div>
+              <div id="cardBody2" class="collapse" data-parent="#accordionExample">
+                <div class="card-body">
+                  <table class="table">
+
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Ford</td>
+                        <td><i class="mr-2 fa fa-phone"></i>Available</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Miller</td>
+                        <td><i class="mr-2 fa fa-phone"></i>Available</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Jones</td>
+                        <td><i class="mr-2 fa fa-user-times"></i>Busy</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>James</td>
+                        <td><i class="mr-2 fa fa-user-times"></i>Busy</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Accordion 3 -->
+            <div class="card">
+              <div class="card-header bg-secondary" id="card3">
+                <h2 class="mb-0">
+                  <button class="btn text-white" type="button" data-toggle="collapse" data-target="#cardBody3">North</button>
+                </h2>
+              </div>
+              <div id="cardBody3" class="collapse" data-parent="#accordionExample">
+                <div class="card-body">
+                  <table class="table">
+
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Ford</td>
+                        <td><i class="mr-2 fa fa-phone"></i>Available</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Miller</td>
+                        <td><i class="mr-2 fa fa-phone"></i>Available</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Jones</td>
+                        <td><i class="mr-2 fa fa-user-times"></i>Busy</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>James</td>
+                        <td><i class="mr-2 fa fa-user-times"></i>Busy</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Accordion 4 -->
+            <div class="card">
+              <div class="card-header bg-secondary" id="card4">
+                <h2 class="mb-0">
+                  <button class="btn text-white" type="button" data-toggle="collapse" data-target="#cardBody4">West</button>
+                </h2>
+              </div>
+              <div id="cardBody4" class="collapse" data-parent="#accordionExample">
+                <div class="card-body">
+                  <table class="table">
+
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Ford</td>
+                        <td><i class="mr-2 fa fa-phone"></i>Available</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Miller</td>
+                        <td><i class="mr-2 fa fa-phone"></i>Available</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Jones</td>
+                        <td><i class="mr-2 fa fa-user-times"></i>Busy</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>James</td>
+                        <td><i class="mr-2 fa fa-user-times"></i>Busy</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+     </div>
+</div>
+
+
+
+<!-- <div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div> -->
